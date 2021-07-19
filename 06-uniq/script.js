@@ -8,14 +8,12 @@
 */
 
 function uniq(arr) {
-    let uniqArr = [];
-
+    const uniqArr = [];
     for (let str of arr) {
         if (!uniqArr.includes(str)) {
             uniqArr.push(str);
         }
     }
-
     return uniqArr;
 }
 

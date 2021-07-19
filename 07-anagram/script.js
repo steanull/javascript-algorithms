@@ -11,14 +11,17 @@
 function anagram(str1, str2) {
     str1 = str1.toLowerCase();
     str2 = str2.toLowerCase();
-    if (str1 === str2) {
-        return false;
+
+    function sort(result) {
+        return result.split('').sort().join('');
     }
-    else {
-        str1 = str1.split('').sort().join('');
-        str2 = str2.split('').sort().join('');
+
+    if (str1 !== str2) {
+        str1 = sort(str1);
+        str2 = sort(str2);
         return (str1 === str2);
     }
+    return false;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
